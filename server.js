@@ -9,7 +9,7 @@ app.use(express.static('public'));
 app.use(express.json());
 
 app.use('/', require('./routes/routesHtml'));
-app.use('/api', require('./routes/routesApi'));
+app.use('/api', require('./routes/routes'));
 
 app.listen(PORT), () => {
     console.log(`API is running on port ${PORT}`);
