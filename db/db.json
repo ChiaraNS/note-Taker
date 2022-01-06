@@ -1,6 +1,14 @@
-[
-    {
-        "title":"Test Title",
-        "text":"Test text"
-    }
-]
+{
+    "notes": [
+        {
+            "title": "Test",
+            "text": "PLEASE WORK",
+            "id": "jsdfho485cf"
+        },
+        {
+            "title": "Almost time for graduation!",
+            "text": "January 20th is the big day",
+            "id": ";oeurhy39p465"
+        }
+    ]
+}
