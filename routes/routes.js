@@ -3,14 +3,7 @@ const fs = require('fs');
 const express = require('express');
 const { createNew } = require('../public/assets/js/script');
 const { noteArr } = require('../db/db.json');
-
-
-module.exports = router => {
-    fs.readFile('./db/db.json', (err, data) => {
-
-        if (err) throw err;
-        
-        const notes = JSON.parse(data);
+const router = require('express').Router();
 
 //GET /api/notes db.json route
     router.get('/api/notes', (req, res) => {
@@ -28,7 +21,7 @@ module.exports = router => {
 //GET /notes note.html route
 
     router.get('/notes', (req, res) => {
-        res.sendFile(path.join(__dirname, '../public/notes.html'));
+        res.sendFile(path.join(__dirname, "../public/notes.html"));
     });
 
 //Get * index.html route
@@ -36,5 +29,5 @@ module.exports = router => {
    router.get('*', (req, res) => {
        res.sendFile(path.join(__dirname, "../public/index.html"));
    });
-})
-}
+
+module.exports = router 
