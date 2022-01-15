@@ -1,20 +1,22 @@
 const path = require('path');
 const fs = require('fs');
 const express = require('express');
-const { createNew } = require('../public/assets/js/script');
-const { noteArr } = require('../db/db.json');
+const { createNew } = require('../db/js/script');
 const router = require('express').Router();
+const uniqid = require('uniqid');
+const notes = require('../db/db.json');
 
 //GET /api/notes db.json route
     router.get('/api/notes', (req, res) => {
+        console.log(notes)
          res.json(notes);
      });
 
 //POST /api/notes   receive new note and add to db.json
     router.post('/api/notes', (req, res) => {
-        req.body.id = uniqId();
+        req.body.id = uniqid();
 
-        let newNote = createNew(req.body, noteArr);
+        let newNote = createNew(req.body, notes);
         res.json(newNote);
     });
 

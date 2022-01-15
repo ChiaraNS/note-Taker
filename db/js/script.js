@@ -1,12 +1,13 @@
 const path = require('path');
 const fs = require('fs');
-const {uniqId} = require('uniqid');
+const uniqid = require('uniqid');
+
 
 
 function createNew (body, noteArr) {
     const newNote = body;
 
-    newNote.id = uniqId()
+    newNote.id = uniqid()
     noteArr.push(newNote);
 
     fs.writeFileSync(path.join(__dirname, '../../../db/db.json'),
