@@ -1,6 +1,6 @@
 # Note Taker
 
-![note-taker](assets/images/notetaker-sc.png)
+![note-taker](./public/assets/images/notetaker-sc.png)
 ## Table of contents
 * [Note Taker Link](https://expressjsnote-taker.herokuapp.com/)
 * [General info](#general-info)
